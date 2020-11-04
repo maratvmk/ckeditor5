@@ -31,6 +31,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import Highlight from "@ckeditor/ckeditor5-highlight/src/highlight";
+import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -49,6 +50,7 @@ ClassicEditor.builtinPlugins = [
 	Highlight,
 	Image,
 	ImageCaption,
+	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -76,15 +78,17 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'|',
 			'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
+			'highlight',
+			'|',
+			'imageUpload',
+			'imageResize',
 			'|',
 			'indent',
 			'outdent',
 			'|',
-			'imageUpload',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'highlight',
 			'undo',
 			'redo'
 		]
